@@ -25,19 +25,28 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cafetheme' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+
 		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
+				<!-- to ge the url for the background image -->
+			<?php if ( is_front_page() ) : ?>
+				<?php 
+					$thumb_id = get_post_thumbnail_id();
+					$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+					$thumb_url = $thumb_url_array[0];
+				 ?>
+
+			<div class="background-image" style="background-image: url(<?php echo $thumb_url ?>)"> 
+			<div class="main-text">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+
+				</div><!-- main-text -->
+			</div><!-- background-image -->
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cafetheme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

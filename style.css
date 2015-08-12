@@ -55,6 +55,7 @@ html {
 
 body {
 	margin: 0;
+	position: relative;
 }
 
 article,
@@ -613,6 +614,7 @@ a:active {
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
+
 }
 
 .comment-navigation .nav-previous,
@@ -885,4 +887,69 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+@font-face {
+  font-family: 'governor_fonts';
+  src: url('governor_fonts/governor-webfont.eot'); /* IE9 Compat Modes */
+  src: url('governor_fonts/governor-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('governor_fonts/governor-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('governor_fonts/governor-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('governor_fonts/governor-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('governor_fonts/governor-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+.widget-area {
+	color: rgba(255, 255, 255, 1);
+	background: rgba( 0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 20%;
+	padding: 1%;
+}
+.widget-area a {
+	text-decoration: none;
+	color: #fff;
+	list-style-type: none;
+}
+.widget-area ul {
+	margin: 0;
+	padding: 0;
+}
+.widget-area li {
+	text-decoration: none;
+	color: #fff;
+	list-style-type: none;
+}
+.main-text {
+	padding-top: 20%;
+	width: 80%;
+	text-align: center;
+	float: right;
+}
+.main-text a {
+	font-size: 3rem;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px #000; 
+	text-transform: uppercase;
+	font-family: governor_fonts;
+}
+.main-text p {
+	font-size: 1.3rem;
+	color: #fff;
+	text-shadow: 1px 1px 2px #000; 
+}
+
+.background-image {
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.site-main {
+	width: 80%;
+	float: right;
+	padding: 2%;
 }
