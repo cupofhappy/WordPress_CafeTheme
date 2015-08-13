@@ -953,3 +953,10 @@ object {
 	float: right;
 	padding: 2%;
 }
+
+
+.site-info {
+	width:80%;
+	float: right;
+	text-align: center;
+}
