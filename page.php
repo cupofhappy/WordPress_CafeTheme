@@ -16,7 +16,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+    $pagename = basename(get_permalink());
+$pagetitle = 'category_name=' . $pagename;
+query_posts($pagetitle);
+    while ( have_posts() ) : the_post();?>
+
+
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
