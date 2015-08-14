@@ -897,6 +897,8 @@ object {
        url('governor_fonts/governor-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('governor_fonts/governor-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+
+/*LEFT NAVIGATION STYLES*/
 .widget-area {
 	color: rgba(255, 255, 255, 1);
 	background: rgba( 0, 0, 0, 0.7);
@@ -904,8 +906,8 @@ object {
 	top: 0;
 	left: 0;
 	height: 100vh;
-	width: 20%;
-	padding: 1%;
+	width: 10%;
+	
 }
 .widget-area a {
 	text-decoration: none;
@@ -921,6 +923,33 @@ object {
 	color: #fff;
 	list-style-type: none;
 }
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
+
+nav {
+  background: grey;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 100vh;
+}
+ul .page_item  {  
+    margin-left: 50%;
+    list-style-type: none;
+    transform: rotate(-90deg);
+    height: 25vh;
+    line-height: 6.5rem;
+    padding: 5%;
+}
+li .page_item  {  
+  float: left;
+  display: inline-block;
+  margin: 0 10px;
+}
+.page_item a:hover {
+	color: blue;
+}
+/*MAIN STYLES */
 .main-text {
 	padding-top: 20%;
 	width: 80%;
@@ -940,21 +969,17 @@ object {
 	color: #fff;
 	text-shadow: 1px 1px 2px #000; 
 }
-
 .background-image {
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 }
-
 .site-main {
 	width: 80%;
 	float: right;
 	padding: 2%;
 }
-
-
 .site-info {
 	width:80%;
 	float: right;
