@@ -20,16 +20,22 @@ get_header(); ?>
         echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
         ?>
     <div id="primary" class="content-area">
-
-
+    
+ 
 
     <?php
         $pagename = basename(get_permalink());
         $pagetitle = 'category_name=' . $pagename;
-        query_posts($pagetitle);
+        query_posts($pagetitle);?>
+
+            <?php if ($pagename == 'contact'):
+          the_post_thumbnail( full);?>
+
+    
+         <?php endif?>
         
         
-        while ( have_posts() ) : the_post();?>
+        <?php while ( have_posts() ) : the_post();?>
 
 
 
@@ -45,51 +51,50 @@ get_header(); ?>
             echo "<script language=javascript>
         console.log('1');
         $('article').addClass('triplecolumns');
-console.log('2');
-var articleCount = $('#main article').length;
-console.log(articleCount);
-var articleArrayId = $('#main article').toArray();
-console.log(articleArrayId[0].id);
-var articleArray = [];
-for (var i = 0; i < articleArrayId.length; i++){
-articleArray.push(articleArrayId[i].id);
-console.log(articleArray);
-}
-for (var j = 0; j < articleArrayId.length; j++){
-var postCount = $('.' + articleArray[j] + ' div p').length;
-for (var k = 0; k < postCount; k++){
-var menuItem = '';
-var counter = k + 1;
-var counter2 = k + 2;
+            console.log('2');
+            var articleCount = $('#main article').length;
+            console.log(articleCount);
+            var articleArrayId = $('#main article').toArray();
+            console.log(articleArrayId[0].id);
+            var articleArray = [];
+            for (var i = 0; i < articleArrayId.length; i++){
+            articleArray.push(articleArrayId[i].id);
+            console.log(articleArray);
+            }
+            for (var j = 0; j < articleArrayId.length; j++){
+            var postCount = $('.' + articleArray[j] + ' div p').length;
+            for (var k = 0; k < postCount; k++){
+            var menuItem = '';
+            var counter = k + 1;
+            var counter2 = k + 2;
 
 
-if ($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').find('img').length) {
-menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
-$('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
-$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
-k++;
+            if ($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').find('img').length) {
+            menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
+            $('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
+            $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
+            k++;
 
-} else {
-if($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').length){
-$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
+            } else {
+            if($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').length){
+            $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
 
-} else {
-$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPicLast');
+            } else {
+            $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPicLast');
 
-}
+            }
 
-}
+            }
 
-}
+            }
 
-}
-var menuItemCount = $('.entry-content p').length;
-console.log(menuItemCount);
-</script>";
+            }
+            var menuItemCount = $('.entry-content p').length;
+            console.log(menuItemCount);
+            </script>";
 ?>
-
-
 <?php endif ?>
+       
 
 
     </main><!-- #main -->

@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class="site-branding">
-				<!-- to ge the url for the background image -->
+				<!-- to get the url for the background image -->
 			<?php if ( is_front_page() ) : ?>
 				<?php 
 					$thumb_id = get_post_thumbnail_id();

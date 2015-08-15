@@ -908,6 +908,7 @@ input.search-submit {
 .page-title {
 	color: #D3D6C4;
 }
+
 /*CUSTOM FONT STYLES*/
 @font-face {
   font-family: 'big-john';
@@ -937,7 +938,6 @@ input.search-submit {
 	left: 0;
 	height: 100vh;
 	width: 10%;
-	
 }
 .widget-area a {
 	text-decoration: none;
@@ -959,7 +959,7 @@ input.search-submit {
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
 
 
-ul .menu-item  {  
+ul .menu-item  { 
     list-style-type: none;
     transform: rotate(-90deg);
     height: 25vh;
@@ -987,8 +987,6 @@ li .menu-item  {
     height: 250px;
     overflow:hidden;
 }
-
-
 .menuFloater {
     position:absolute;
     z-index:1;
@@ -998,7 +996,6 @@ li .menu-item  {
     color:white;
     width:;
 }
-
 .menuNoPic{
     text-align:center;
     color:white;
@@ -1017,13 +1014,11 @@ li .menu-item  {
     margin-bottom:;
     padding:10px 0;
 }
-
 .marginKiller {
     margin:0;
     margin-bottom:0;
     position:;
 }
-
 .marginKiller img{
     position:relative;
     left:;
@@ -1031,7 +1026,6 @@ li .menu-item  {
     margin:0;
     width:100%;
 }
-
 
 /*MAIN STYLES */
 .main-text {
@@ -1062,7 +1056,6 @@ li .menu-item  {
 	background-attachment: fixed;
 }
 .site-main {
-
 	width: 90%;
 	float: right;
 }
@@ -1078,11 +1071,8 @@ li .menu-item  {
 	font-family: 'work-sans', sans-serif;
 }
 /*LOCATION STYLES*/
-.location-image {
-	height: 100vh;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
+.content-area img {
+	padding-left:10%;
 }
 
 /*FOOTER STYLES*/
