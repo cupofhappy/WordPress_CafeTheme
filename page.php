@@ -43,7 +43,36 @@ get_header(); ?>
         console.log('1');
         $('article').addClass('triplecolumns');
 console.log('2');
-$('.entry-content p a').addClass('menuImgFormat');
+var articleCount = $('#main article').length;
+console.log(articleCount);
+
+var articleArrayId = $('#main article').toArray();
+console.log(articleArrayId[0].id);
+
+var articleArray = [];
+
+for (var i = 0; i < articleArrayId.length; i++){
+articleArray.push(articleArrayId[i].id);
+console.log(articleArray);
+}
+
+for (var j = 0; j < articleArrayId.length; j++){
+var postCount = $('.' + articleArray[j] + ' div p').length;
+
+for (var k = 0; k < postCount; k++){
+var menuItem = '';
+
+if (k % 2 === 0){
+menuItem = $('.' + articleArray[j] + 'div p:nth-child(' + k+1 + ')');
+console.log(menuItem);
+}
+
+}
+
+}
+
+var menuItemCount = $('.entry-content p').length;
+console.log(menuItemCount);
 </script>";
         ?>
 
