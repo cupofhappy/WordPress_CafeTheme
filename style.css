@@ -960,12 +960,11 @@ input.search-submit {
 
 
 ul .page_item  {  
-    margin-left: 50%;
     list-style-type: none;
     transform: rotate(-90deg);
     height: 25vh;
-    line-height: 6.5rem;
-    padding: 5%;
+    line-height: 9.5rem;
+    text-align: center;
 }
 li .page_item  {  
   float: left;
@@ -979,9 +978,9 @@ li .page_item  {
 /*Styles for Menu*/
 
 .triplecolumns {
-    width:33%;
+    width: 33%;
     float: left;
-    text-align:center;
+    text-align: center;
 }
 
 .menuImgFormat {
@@ -1067,13 +1066,16 @@ li .page_item  {
 }
 
 /*FOOTER STYLES*/
-.site-content i {
+.social {
+	padding-bottom: 2%;
+}
+.social i {
 	color: #D3D6C4;
 	font-size: 1.5rem;
-	padding: 0 15%;
+	padding: 0 1%;
 	display: inline;
 }
-.site-content i:hover {
+.social i:hover {
 	color: #BE824C;
 }
 .site-content {
@@ -1088,6 +1090,8 @@ li .page_item  {
 	background: #272C28;
 	color: #C8D2C3;
 	padding: 2%;
+	width: 90%;
+    float: right;
 }	
 .site-info a {
 	text-decoration: none;
