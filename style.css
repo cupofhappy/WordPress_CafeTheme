@@ -963,6 +963,30 @@ li .page_item  {
     overflow:hidden;
 }
 
+.hidden {
+    display:none;
+}
+
+.menuFloater {
+    position:absolute;
+    z-index:1;
+    bottom:;
+    text-align:center;
+    background: rgba(0,0,0,0.7);
+    color:white;
+    width:;
+}
+
+.marginKiller {
+    margin-top:0;
+    margin-bottom:0;
+    position:;
+}
+
+.marginKiller img{
+    position:relative;
+}
+
 
 /*MAIN STYLES */
 .main-text {

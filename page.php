@@ -61,10 +61,17 @@ var postCount = $('.' + articleArray[j] + ' div p').length;
 
 for (var k = 0; k < postCount; k++){
 var menuItem = '';
+var counter = k + 1;
+var counter2 = k + 2;
 
 if (k % 2 === 0){
-menuItem = $('.' + articleArray[j] + 'div p:nth-child(' + k+1 + ')');
+menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
+$('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
+$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
+
 console.log(menuItem);
+} else {
+
 }
 
 }
