@@ -959,19 +959,19 @@ input.search-submit {
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
 
 
-ul .page_item  {  
+ul .menu-item  {  
     list-style-type: none;
     transform: rotate(-90deg);
     height: 25vh;
     line-height: 9.5rem;
     text-align: center;
 }
-li .page_item  {  
+li .menu-item  {  
   float: left;
   display: inline-block;
   margin: 0 10px;
 }
-.page_item a:hover {
+.menu-item a:hover {
 	color: #BE824C;
 }
 
@@ -988,9 +988,6 @@ li .page_item  {
     overflow:hidden;
 }
 
-.hidden {
-    display:none;
-}
 
 .menuFloater {
     position:absolute;
@@ -1002,14 +999,37 @@ li .page_item  {
     width:;
 }
 
+.menuNoPic{
+    text-align:center;
+    color:white;
+    background:;
+    float:;
+    margin:0;
+    margin-bottom:;
+    padding:10px 0;
+}
+.menuNoPicLast{
+    text-align:center;
+    color:white;
+    background:;
+    float:;
+    margin:0;
+    margin-bottom:;
+    padding:10px 0;
+}
+
 .marginKiller {
-    margin-top:0;
+    margin:0;
     margin-bottom:0;
     position:;
 }
 
 .marginKiller img{
     position:relative;
+    left:;
+    padding:0;
+    margin:0;
+    width:100%;
 }
 
 
@@ -1108,6 +1128,13 @@ li .page_item  {
 	background: #272C28; ;
 }
 
+footer {
+    position:;
+    bottom:0;
+    width:100%;
+    z-index:0;
+}
+
 /*INSTAGRAM STYLES*/
 .sbi_header_text p {
 	color: #fff;
@@ -1126,5 +1153,24 @@ li .page_item  {
 }
 a.by:hover{
 	color: #BE824C;
+}
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
 

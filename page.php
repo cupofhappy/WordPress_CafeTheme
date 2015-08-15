@@ -22,6 +22,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
 
 
+
     <?php
         $pagename = basename(get_permalink());
         $pagetitle = 'category_name=' . $pagename;
@@ -35,10 +36,12 @@ get_header(); ?>
         <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 
-    <?php endwhile; // End of the loop. ?>
+
+	<?php endwhile; // End of the loop. ?>
+
+        <?php if ($pagename == 'menu'):
 
 
-        <?php if ($pagename == 'menu')
             echo "<script language=javascript>
         console.log('1');
         $('article').addClass('triplecolumns');
@@ -58,21 +61,36 @@ for (var k = 0; k < postCount; k++){
 var menuItem = '';
 var counter = k + 1;
 var counter2 = k + 2;
-if (k % 2 === 0){
+
+
+if ($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').find('img').length) {
 menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
 $('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
 $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
-console.log(menuItem);
+k++;
+
 } else {
+if($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').length){
+$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
+
+} else {
+$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPicLast');
+
 }
+
 }
+
+}
+
 }
 var menuItemCount = $('.entry-content p').length;
 console.log(menuItemCount);
 </script>";
-        ?>
+?>
 
-        
+
+<?php endif ?>
+
 
     </main><!-- #main -->
 </div><!-- #primary -->
