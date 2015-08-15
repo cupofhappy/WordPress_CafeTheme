@@ -30,6 +30,11 @@ get_header(); ?>
 
             <?php if ($pagename == 'contact'):
           the_post_thumbnail( full);?>
+<? echo "<script language=javascript>
+$('.site-main img').addClass('map');
+</script>";
+
+?>
 
     
          <?php endif?>
