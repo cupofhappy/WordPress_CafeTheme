@@ -56,6 +56,7 @@ html {
 body {
 	margin: 0;
 	position: relative;
+	font-family: 'work-sans', sans-serif;
 }
 
 article,
@@ -275,7 +276,7 @@ textarea {
 	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1;
 }
 
 h1,
@@ -500,7 +501,7 @@ a {
 }
 
 a:visited {
-	color: purple;
+	color: #506261;
 }
 
 a:hover,
@@ -888,19 +889,48 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+/*404 THEMES*/
+.widget_recent_entries a, .widget_categories a {
+	color: #BE824C;
+	text-decoration: none;
+}
+h2.widgettitle, h2.widget-title {
+	color: #D3D6C4;
+	font-family: 'work-sans', sans-serif;
+
+}
+input.search-submit {
+	background: #C8D2C3;
+	color: #272C28;
+}
+.page-title {
+	color: #D3D6C4;
+}
+/*CUSTOM FONT STYLES*/
 @font-face {
-  font-family: 'governor_fonts';
-  src: url('governor_fonts/governor-webfont.eot'); /* IE9 Compat Modes */
-  src: url('governor_fonts/governor-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('governor_fonts/governor-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('governor_fonts/governor-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('governor_fonts/governor-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('governor_fonts/governor-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'big-john';
+  src: url('big-john/big_john-webfont.eot'); /* IE9 Compat Modes */
+  src: url('big-john/big_john-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('big-john/big_john-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('big-john/big_john-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('big-john/big_john-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('tbig-john/big_john-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'work-sans';
+  src: url('work-sans/worksans-medium-webfont.eot'); /* IE9 Compat Modes */
+  src: url('work-sans/worksans-medium-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('work-sans/worksans-medium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('work-sans/worksans-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('work-sans/worksans-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('work-sans/worksans-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 /*LEFT NAVIGATION STYLES*/
 .widget-area {
-	color: rgba(255, 255, 255, 1);
+	color: rgba(39, 44, 40, 1);
 	background: rgba( 0, 0, 0, 0.7);
 	position: fixed;
 	top: 0;
@@ -922,17 +952,13 @@ object {
 	text-decoration: none;
 	color: #fff;
 	list-style-type: none;
+	font-family: 'work-sans', sans-serif;
+	text-transform: uppercase;
 }
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
 
-nav {
-  background: grey;
-  margin: 0;
-  padding: 0;
-  width: 30%;
-  height: 100vh;
-}
+
 ul .page_item  {  
     margin-left: 50%;
     list-style-type: none;
@@ -947,27 +973,29 @@ li .page_item  {
   margin: 0 10px;
 }
 .page_item a:hover {
-	color: blue;
+	color: #BE824C;
 }
 /*MAIN STYLES */
 .main-text {
 	padding-top: 20%;
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	float: right;
 }
 .main-text a {
-	font-size: 3rem;
+	font-size: 5rem;
 	color: #fff;
 	text-decoration: none;
-	text-shadow: 1px 1px 2px #000; 
+	text-shadow: 5px 10px 0px #272C28;  
 	text-transform: uppercase;
-	font-family: governor_fonts;
+	font-family: big-john;
 }
 .main-text p {
+	font-family: 'work-sans', sans-serif;
 	font-size: 1.3rem;
 	color: #fff;
 	text-shadow: 1px 1px 2px #000; 
+	margin: 0;
 }
 .background-image {
 	height: 100vh;
@@ -976,12 +1004,82 @@ li .page_item  {
 	background-attachment: fixed;
 }
 .site-main {
-	width: 80%;
+	width: 90%;
 	float: right;
-	padding: 2%;
+}
+/*POST STYLES*/
+.site-title {
+	text-align: center;
+}
+.site-title a {
+	text-decoration: none;
+	color: #fff;
+}
+.site-description p {
+	font-family: 'work-sans', sans-serif;
+}
+/*LOCATION STYLES*/
+.location-image {
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*FOOTER STYLES*/
+.site-content i {
+	color: #D3D6C4;
+	font-size: 1.5rem;
+	padding: 0 15%;
+	display: inline;
+}
+.site-content i:hover {
+	color: #BE824C;
+}
+.site-content {
+	background: #272C28;
+	padding: 2% 0 0 0;
+}
+.site-content a {
+	text-decoration: none;
 }
 .site-info {
-	width:80%;
-	float: right;
 	text-align: center;
+	background: #272C28;
+	color: #C8D2C3;
+	padding: 2%;
+}	
+.site-info a {
+	text-decoration: none;
+	color: #506261;
+}
+.site-info a:hover {
+	color: #D3D6C4;
+}
+.entry-title {
+	color: #D3D6C4;
+	font-family: 'work-sans', sans-serif;
+}
+.site-header {
+	background: #272C28; ;
+}
+
+/*INSTAGRAM STYLES*/
+.sbi_header_text p {
+	color: #fff;
+}
+.sbi_header_text h3 {
+	color: #BE824C;
+}
+#sb_instagram #sbi_load .sbi_load_btn {
+	color: #fff;
+	background: #BE824C;
+}
+/** CAN NOT CHANGE INSTAGRAM BUTTON STYLES*/
+
+.site-footer {
+	background: #272C28;
+}
+a.by:hover{
+	color: #BE824C;
 }
