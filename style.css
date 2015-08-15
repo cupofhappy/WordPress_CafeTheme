@@ -985,3 +985,8 @@ li .page_item  {
 	float: right;
 	text-align: center;
 }
+
+.triplecolumns {
+    width:33%;
+    float: left;
+}

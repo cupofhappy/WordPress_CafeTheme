@@ -14,23 +14,38 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<?php
-    $pagename = basename(get_permalink());
-$pagetitle = 'category_name=' . $pagename;
-query_posts($pagetitle);
-    while ( have_posts() ) : the_post();?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+	<?php
+        $pagename = basename(get_permalink());
+        $pagetitle = 'category_name=' . $pagename;
+        query_posts($pagetitle);
+        
+        
+        while ( have_posts() ) : the_post();?>
 
 
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+	    <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 
-			<?php endwhile; // End of the loop. ?>
+	<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        <?php if ($pagename == 'menu')
+            echo 'a';
+            echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
+            echo "<script language=javascript>
+        console.log('1');
+        $('article').addClass('triplecolumns');
+console.log('2');
+</script>";
+        ?>
+
+        
+
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
