@@ -11,7 +11,6 @@
  *
  * @package CafeTheme
  */
-
 get_header(); ?>
 
 
@@ -20,17 +19,11 @@ get_header(); ?>
         <?php
         echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
         ?>
-	<div id="primary" class="content-area">
+    <div id="primary" class="content-area">
 
 
-		<main id="main" class="site-main" role="main">
-			<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
-			<a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
-			<a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
 
-
-        
-	<?php
+    <?php
         $pagename = basename(get_permalink());
         $pagetitle = 'category_name=' . $pagename;
         query_posts($pagetitle);
@@ -40,7 +33,8 @@ get_header(); ?>
 
 
 
-	    <?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <?php get_template_part( 'template-parts/content', 'page' ); ?>
+
 
 
 	<?php endwhile; // End of the loop. ?>
@@ -54,24 +48,20 @@ get_header(); ?>
 console.log('2');
 var articleCount = $('#main article').length;
 console.log(articleCount);
-
 var articleArrayId = $('#main article').toArray();
 console.log(articleArrayId[0].id);
-
 var articleArray = [];
-
 for (var i = 0; i < articleArrayId.length; i++){
 articleArray.push(articleArrayId[i].id);
 console.log(articleArray);
 }
-
 for (var j = 0; j < articleArrayId.length; j++){
 var postCount = $('.' + articleArray[j] + ' div p').length;
-
 for (var k = 0; k < postCount; k++){
 var menuItem = '';
 var counter = k + 1;
 var counter2 = k + 2;
+
 
 if ($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').find('img').length) {
 menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
@@ -81,12 +71,10 @@ k++;
 } else {
 $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
 
-}
 
 }
-
 }
-
+}
 var menuItemCount = $('.entry-content p').length;
 console.log(menuItemCount);
 </script>";
