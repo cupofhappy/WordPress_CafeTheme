@@ -56,6 +56,7 @@ html {
 body {
 	margin: 0;
 	position: relative;
+	font-family: 'work-sans', sans-serif;
 }
 
 article,
@@ -888,6 +889,22 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*404 THEMES*/
+.widget_recent_entries a, .widget_categories a {
+	color: #BE824C;
+	text-decoration: none;
+}
+h2.widgettitle, h2.widget-title {
+	color: #D3D6C4;
+	font-family: 'work-sans', sans-serif;
+
+}
+input.search-submit {
+	background: #C8D2C3;
+	color: #272C28;
+}
+
 /*CUSTOM FONT STYLES*/
 @font-face {
   font-family: 'big-john';
