@@ -1003,6 +1003,15 @@ li .page_item  {
     width:;
 }
 
+.menuNoPic{
+    text-align:left;
+    color:white;
+    background:rgba(0,0,0,0.7);
+    float:left;
+    margin:10px;
+    margin-bottom:10px;
+}
+
 .marginKiller {
     margin-top:0;
     margin-bottom:0;
@@ -1104,6 +1113,13 @@ li .page_item  {
 	background: #272C28; ;
 }
 
+footer {
+    position:;
+    bottom:0;
+    width:100%;
+    z-index:0;
+}
+
 /*INSTAGRAM STYLES*/
 .sbi_header_text p {
 	color: #fff;
@@ -1122,5 +1138,24 @@ li .page_item  {
 }
 a.by:hover{
 	color: #BE824C;
+}
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
 

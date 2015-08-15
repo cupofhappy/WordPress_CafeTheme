@@ -22,7 +22,7 @@ get_header(); ?>
         ?>
 	<div id="primary" class="content-area">
 
-		<div class="location-image" style="location-image: url(<?php echo $thumb_url ?>)"> 
+
 		<main id="main" class="site-main" role="main">
 			<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
 			<a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
@@ -45,7 +45,7 @@ get_header(); ?>
 
 	<?php endwhile; // End of the loop. ?>
 
-        <?php if ($pagename == 'menu')
+        <?php if ($pagename == 'menu'):
 
 
             echo "<script language=javascript>
@@ -73,13 +73,13 @@ var menuItem = '';
 var counter = k + 1;
 var counter2 = k + 2;
 
-if (k % 2 === 0){
+if ($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').find('img').length) {
 menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text();
 $('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
 $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
-
-console.log(menuItem);
+k++;
 } else {
+$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
 
 }
 
@@ -90,9 +90,11 @@ console.log(menuItem);
 var menuItemCount = $('.entry-content p').length;
 console.log(menuItemCount);
 </script>";
-        ?>
+?>
 
-        
+
+<?php endif ?>
+
 
     </main><!-- #main -->
 </div><!-- #primary -->
