@@ -1066,13 +1066,16 @@ li .page_item  {
 }
 
 /*FOOTER STYLES*/
-.site-content i {
+.social {
+	padding-bottom: 2%;
+}
+.social i {
 	color: #D3D6C4;
 	font-size: 1.5rem;
-	padding: 0 15%;
+	padding: 0 1%;
 	display: inline;
 }
-.site-content i:hover {
+.social i:hover {
 	color: #BE824C;
 }
 .site-content {
@@ -1087,6 +1090,8 @@ li .page_item  {
 	background: #272C28;
 	color: #C8D2C3;
 	padding: 2%;
+	width: 90%;
+    float: right;
 }	
 .site-info a {
 	text-decoration: none;
