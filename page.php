@@ -14,11 +14,20 @@
 
 get_header(); ?>
 
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         <?php
         echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
         ?>
+	<div id="primary" class="content-area">
+
+		<div class="location-image" style="location-image: url(<?php echo $thumb_url ?>)"> 
+		<main id="main" class="site-main" role="main">
+			<a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+			<a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+			<a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+
 
         
 	<?php
