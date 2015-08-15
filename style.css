@@ -975,6 +975,45 @@ li .page_item  {
 .page_item a:hover {
 	color: #BE824C;
 }
+
+/*Styles for Menu*/
+
+.triplecolumns {
+    width:33%;
+    float: left;
+    text-align:center;
+}
+
+.menuImgFormat {
+    height: 250px;
+    overflow:hidden;
+}
+
+.hidden {
+    display:none;
+}
+
+.menuFloater {
+    position:absolute;
+    z-index:1;
+    bottom:;
+    text-align:center;
+    background: rgba(0,0,0,0.7);
+    color:white;
+    width:;
+}
+
+.marginKiller {
+    margin-top:0;
+    margin-bottom:0;
+    position:;
+}
+
+.marginKiller img{
+    position:relative;
+}
+
+
 /*MAIN STYLES */
 .main-text {
 	padding-top: 20%;
@@ -1004,6 +1043,7 @@ li .page_item  {
 	background-attachment: fixed;
 }
 .site-main {
+
 	width: 90%;
 	float: right;
 }
@@ -1083,3 +1123,4 @@ li .page_item  {
 a.by:hover{
 	color: #BE824C;
 }
+
