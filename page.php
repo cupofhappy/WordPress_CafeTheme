@@ -68,12 +68,20 @@ menuItem = $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').text()
 $('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').addClass('marginKiller');
 $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuFloater');
 k++;
+
 } else {
+if($('.' + articleArray[j] + ' div p:nth-child(' + counter2 + ')').length){
 $('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPic');
 
+} else {
+$('.' + articleArray[j] + ' div p:nth-child(' + counter + ')').addClass('menuNoPicLast');
 
 }
+
 }
+
+}
+
 }
 var menuItemCount = $('.entry-content p').length;
 console.log(menuItemCount);
