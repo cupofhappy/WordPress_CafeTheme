@@ -1071,11 +1071,8 @@ li .menu-item  {
 	font-family: 'work-sans', sans-serif;
 }
 /*LOCATION STYLES*/
-.location-image {
-	height: 50vh;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
+.content-area img {
+	padding-left:10%;
 }
 
 /*FOOTER STYLES*/
