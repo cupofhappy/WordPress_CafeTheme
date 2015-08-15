@@ -888,19 +888,29 @@ object {
 .gallery-caption {
 	display: block;
 }
+/*CUSTOM FONT STYLES*/
 @font-face {
-  font-family: 'governor_fonts';
-  src: url('governor_fonts/governor-webfont.eot'); /* IE9 Compat Modes */
-  src: url('governor_fonts/governor-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('governor_fonts/governor-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('governor_fonts/governor-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('governor_fonts/governor-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('governor_fonts/governor-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'big-john';
+  src: url('big-john/big_john-webfont.eot'); /* IE9 Compat Modes */
+  src: url('big-john/big_john-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('big-john/big_john-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('big-john/big_john-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('big-john/big_john-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('tbig-john/big_john-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'work-sans';
+  src: url('work-sans/worksans-medium-webfont.eot'); /* IE9 Compat Modes */
+  src: url('work-sans/worksans-medium-webfont.eot-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('work-sans/worksans-medium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('work-sans/worksans-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('work-sans/worksans-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('work-sans/worksans-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 /*LEFT NAVIGATION STYLES*/
 .widget-area {
-	color: rgba(255, 255, 255, 1);
+	color: rgba(39, 44, 40, 1);
 	background: rgba( 0, 0, 0, 0.7);
 	position: fixed;
 	top: 0;
@@ -922,17 +932,13 @@ object {
 	text-decoration: none;
 	color: #fff;
 	list-style-type: none;
+	font-family: 'work-sans', sans-serif;
+	text-transform: uppercase;
 }
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
 
-nav {
-  background: grey;
-  margin: 0;
-  padding: 0;
-  width: 30%;
-  height: 100vh;
-}
+
 ul .page_item  {  
     margin-left: 50%;
     list-style-type: none;
@@ -947,7 +953,7 @@ li .page_item  {
   margin: 0 10px;
 }
 .page_item a:hover {
-	color: blue;
+	color: #BE824C;
 }
 /*MAIN STYLES */
 .main-text {
@@ -957,17 +963,19 @@ li .page_item  {
 	float: right;
 }
 .main-text a {
-	font-size: 3rem;
+	font-size: 5rem;
 	color: #fff;
 	text-decoration: none;
-	text-shadow: 1px 1px 2px #000; 
+	text-shadow: 1px 1px 2px #000;  
 	text-transform: uppercase;
-	font-family: governor_fonts;
+	font-family: big-john;
 }
 .main-text p {
+	font-family: 'work-sans', sans-serif;
 	font-size: 1.3rem;
 	color: #fff;
 	text-shadow: 1px 1px 2px #000; 
+	margin: 0;
 }
 .background-image {
 	height: 100vh;
@@ -980,8 +988,48 @@ li .page_item  {
 	float: right;
 	padding: 2%;
 }
-.site-info {
-	width:80%;
-	float: right;
+/*POST STYLES*/
+.site-title {
 	text-align: center;
+}
+.site-title a {
+	text-decoration: none;
+	color: #fff;
+}
+.site-description p {
+	font-family: 'work-sans', sans-serif;
+}
+
+/*FOOTER STYLES*/
+.site-info {
+	text-align: center;
+	background: #272C28;
+	color: #C8D2C3;
+	padding-bottom: 2%;
+}	
+.site-info a {
+	text-decoration: none;
+	color: #506261;
+}
+.site-info a:hover {
+	color: #D3D6C4;
+}
+.entry-title {
+	color: #D3D6C4;
+	font-family: 'work-sans', sans-serif;
+}
+.site-header {
+	background: #272C28; ;
+}
+.sbi_header_text {
+	color: #D3D6C4;
+}
+.site-content {
+	background: #272C28;
+}
+.site-footer {
+	background: #272C28;
+}
+a.by:hover{
+	color: #BE824C;
 }

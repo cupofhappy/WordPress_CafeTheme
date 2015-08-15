@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cafetheme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cafetheme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'cafetheme' ), 'cafetheme', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'cafetheme' ), 'COFFEE SHOP', '<a href="http://www.anguswong.co" class="by" rel="designer">Angus Wong </a> & <a href="http://www.alexdavey.ca" class= "by" rel="designer">  Alex Davey</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
