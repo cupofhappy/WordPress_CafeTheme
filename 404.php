@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'OOOOOH NOOOOO! Sorry, the Page can not be found.', 'cafetheme' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Let\'s try this again!', 'cafetheme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
