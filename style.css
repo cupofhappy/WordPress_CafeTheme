@@ -949,6 +949,21 @@ li .page_item  {
 .page_item a:hover {
 	color: blue;
 }
+
+/*Styles for Menu*/
+
+.triplecolumns {
+    width:33%;
+    float: left;
+    text-align:center;
+}
+
+.menuImgFormat {
+    height: 250px;
+    overflow:hidden;
+}
+
+
 /*MAIN STYLES */
 .main-text {
 	padding-top: 20%;
@@ -976,17 +991,13 @@ li .page_item  {
 	background-attachment: fixed;
 }
 .site-main {
-	width: 80%;
+	width:90%;
 	float: right;
 	padding: 2%;
 }
 .site-info {
-	width:80%;
+    width:90%;
 	float: right;
 	text-align: center;
 }
 
-.triplecolumns {
-    width:33%;
-    float: left;
-}

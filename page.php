@@ -16,7 +16,11 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+        <?php
+        echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
+        ?>
 
+        
 	<?php
         $pagename = basename(get_permalink());
         $pagetitle = 'category_name=' . $pagename;
@@ -33,12 +37,13 @@ get_header(); ?>
 	<?php endwhile; // End of the loop. ?>
 
         <?php if ($pagename == 'menu')
-            echo 'a';
-            echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>";
+
+
             echo "<script language=javascript>
         console.log('1');
         $('article').addClass('triplecolumns');
 console.log('2');
+$('.entry-content p a').addClass('menuImgFormat');
 </script>";
         ?>
 
