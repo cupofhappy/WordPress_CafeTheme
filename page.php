@@ -68,7 +68,7 @@ console.log(articleArray);
 for(var l = 0; l < articleArray.length; l++){
 if(articleArray[l].textContent.toLowerCase().indexOf('address') >=0 ){
 console.log(l);
-addressArray = l
+addressArray = l;
 }
 }
 console.log(articleArray[1].children[1].children);
@@ -110,6 +110,14 @@ function initialize(lat,lng) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
+var LatLng = {'lat': lat, 'lng':lng};
+console.log(LatLng);
+var marker = new google.maps.Marker({
+position:LatLng,
+map:map,
+title:'ohyeah'
+});
+
 }
 setInterval(initialize(),100);
 
