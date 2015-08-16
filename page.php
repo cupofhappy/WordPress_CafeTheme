@@ -56,7 +56,11 @@ $('article').addClass('triplecolumns cf');
 height:400px;
 width:60%;
 margin: 0 auto;
+<<<<<<< HEAD
 padding-top:50px;
+=======
+padding: 2%;
+>>>>>>> 35dc74d65f79a3d92863dae4fd78ef2d8ae50b4d
 }
 
 </style>
@@ -94,6 +98,7 @@ dataTyle:'json',
 data:{
 address: fullAddress,
 key:'AIzaSyBaxYYE0CKb-rODDzGDde8a4CBZyfyrwPY'
+
 },
 success: function(res){
 console.log(res);
@@ -108,11 +113,16 @@ initialize(lat,lng);
 function initialize(lat,lng) {
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
         center: new google.maps.LatLng(lat, lng),
         zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
+
 var LatLng = {'lat': lat, 'lng':lng};
 console.log(LatLng);
 var marker = new google.maps.Marker({
@@ -122,7 +132,8 @@ title:'ohyeah'
 });
 
 }
-setInterval(initialize(),100);
+
+
 
 
 

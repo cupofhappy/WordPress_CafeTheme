@@ -949,6 +949,7 @@ input.search-submit {
 .widget-area ul {
 	margin: 0;
 	padding: 0;
+
 }
 .widget-area li {
 	text-decoration: none;
@@ -960,13 +961,13 @@ input.search-submit {
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
 
-
 ul .menu-item  { 
     list-style-type: none;
     transform: rotate(-90deg);
     height: 25vh;
     line-height: 13.5rem;
     text-align: center;
+    width:50px;
 }
 li .menu-item  {  
   float: left;
@@ -986,12 +987,6 @@ li .menu-item  {
     float: left;
     text-align: center;
 }
-
-.blue {
-    color:blue;
-    font-size:100px;
-}
-
 .menuImgFormat {
     height: 250px;
     overflow:hidden;
@@ -1089,7 +1084,8 @@ li .menu-item  {
 }
 .content-area p {
 	color: #D3D6C4;
-	font-size: 1.25rem;
+	font-size: 1.1rem;
+	margin-top: 0;
 }
 
 /*FOOTER STYLES*/
