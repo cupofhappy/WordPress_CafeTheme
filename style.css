@@ -1194,6 +1194,30 @@ a.by:hover{
     margin-top:20px;
 }
 
-.articlediv {
+/*MEDIA QUERIES*/
 
+@media screen and (max-width: 775px) {
+    .content-area p {
+    	font-size: 1rem;
 }
+	p.menuNoPic {
+		padding: 0;
+	}
+	.entry-title h1 {
+		font-size: 1.5rem;
+	}
+}
+@media screen and (max-width: 690px) {
+	.content-area p {
+		font-size: 0.8rem;
+	}
+}
+@media screen and (max-width: 575px) {
+	.triplecolumns {
+		width: 90%;
+	}
+	.content-area p {
+		font-size: 1rem;
+	}
+}
+
