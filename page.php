@@ -74,6 +74,7 @@ dataTyle:'json',
 data:{
 address:'1600 Amphitheatre Parkway',
 key:'AIzaSyBaxYYE0CKb-rODDzGDde8a4CBZyfyrwPY'
+
 },
 success: function(res){
 console.log(res);
@@ -89,7 +90,9 @@ function initialize() {
     var mapCanvas = document.getElementById('map');
     var mapOptions = { center: new google.maps.LatLng(44.5403, -78.5463), zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP}
     var map = new google.maps.Map(mapCanvas, mapOptions)
+    
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>";?>
