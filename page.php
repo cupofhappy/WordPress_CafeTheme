@@ -102,14 +102,19 @@ initialize(lat,lng);
 }
 })
 
-
 function initialize(lat,lng) {
     var mapCanvas = document.getElementById('map');
-    var mapOptions = { center: new google.maps.LatLng(lat,lng), zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP}
+    var mapOptions = {
+        center: new google.maps.LatLng(lat, lng),
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
     var map = new google.maps.Map(mapCanvas, mapOptions)
 }
+setInterval(initialize(),100);
 
-google.maps.event.addDomListener(window, 'load', initialize);
+
+
 </script>";?>
 
 </div>
