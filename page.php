@@ -53,7 +53,9 @@ $('article').addClass('triplecolumns');
 <style>
 #map {
 height:400px;
-width:100%;
+width:60%;
+margin: 0 auto;
+padding: 2%;
 }
 
 </style>
@@ -106,6 +108,10 @@ initialize(lat,lng);
 function initialize(lat,lng) {
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
         center: new google.maps.LatLng(lat, lng),
         zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP
