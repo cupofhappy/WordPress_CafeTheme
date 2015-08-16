@@ -963,7 +963,7 @@ ul .menu-item  {
     list-style-type: none;
     transform: rotate(-90deg);
     height: 25vh;
-    line-height: 9.5rem;
+    line-height: 13.5rem;
     text-align: center;
 }
 li .menu-item  {  
@@ -974,6 +974,8 @@ li .menu-item  {
 .menu-item a:hover {
 	color: #BE824C;
 }
+/*contact map*/
+
 
 /*Styles for Menu*/
 
@@ -981,6 +983,11 @@ li .menu-item  {
     width: 33%;
     float: left;
     text-align: center;
+}
+
+.blue {
+    color:blue;
+    font-size:100px;
 }
 
 .menuImgFormat {

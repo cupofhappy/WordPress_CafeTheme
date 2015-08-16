@@ -28,17 +28,7 @@ get_header(); ?>
         $pagetitle = 'category_name=' . $pagename;
         query_posts($pagetitle);?>
 
-            <?php if ($pagename == 'contact'):
-          the_post_thumbnail( full);?>
-<? echo "<script language=javascript>
-$('.site-main img').addClass('map');
-</script>";
-
-?>
-
-    
-         <?php endif?>
-        
+       
         
         <?php while ( have_posts() ) : the_post();?>
 
@@ -49,6 +39,68 @@ $('.site-main img').addClass('map');
 
 
 	<?php endwhile; // End of the loop. ?>
+
+
+            <?php if ($pagename == 'contact'):
+          the_post_thumbnail( full);?>
+
+<?php echo "<script language=javascript>
+$('article').addClass('triplecolumns');
+
+</script>";
+?>
+
+<div>
+<style>
+#map {
+height:400px;
+width:100%;
+}
+
+</style>
+<div id='map'></div>    
+
+            <?php echo "<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js'></script>"?>
+            <?php echo "<script language=javascript>
+var articleArray = [];
+articleArray = $('article').toArray();
+console.log(articleArray);
+for(var l = 0; l < articleArray.length; l++){
+if ()
+}
+$.ajax({
+url:'https://maps.googleapis.com/maps/api/geocode/json',
+      type:'GET',
+dataTyle:'json',
+data:{
+address:'1600 Amphitheatre Parkway',
+key:'AIzaSyBaxYYE0CKb-rODDzGDde8a4CBZyfyrwPY'
+},
+success: function(res){
+console.log(res);
+var lat = (res.results[2].geometry.location.lat);
+console.log(lat);
+var lng = (res.results[2].geometry.location.lng);
+console.log(lng);
+}
+})
+
+
+function initialize() {
+    var mapCanvas = document.getElementById('map');
+    var mapOptions = { center: new google.maps.LatLng(44.5403, -78.5463), zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP}
+    var map = new google.maps.Map(mapCanvas, mapOptions)
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>";?>
+
+</div>
+
+<? endif?>
+
+
+
 
         <?php if ($pagename == 'menu'):
 
