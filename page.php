@@ -62,39 +62,70 @@ width:100%;
             <?php echo "<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js'></script>"?>
             <?php echo "<script language=javascript>
 var articleArray = [];
+var addressArray = 0;
 articleArray = $('article').toArray();
 console.log(articleArray);
 for(var l = 0; l < articleArray.length; l++){
+if(articleArray[l].textContent.toLowerCase().indexOf('address') >=0 ){
+console.log(l);
+addressArray = l;
+}
+}
+console.log(articleArray[1].children[1].children);
+
+var fullAddressArray = [];
+
+for(var m = 0; m < articleArray[addressArray].children[1].children.length; m++){
+var addedAddress = articleArray[addressArray].children[1].children[m].textContent;
+fullAddressArray.push(addedAddress);
 
 }
+
+var fullAddress = fullAddressArray.join(' ');
+console.log(fullAddress);
+
 $.ajax({
 url:'https://maps.googleapis.com/maps/api/geocode/json',
       type:'GET',
 dataTyle:'json',
 data:{
-address:'1600 Amphitheatre Parkway',
+address: fullAddress,
 key:'AIzaSyBaxYYE0CKb-rODDzGDde8a4CBZyfyrwPY'
 
 },
 success: function(res){
 console.log(res);
-var lat = (res.results[2].geometry.location.lat);
+var lat = (res.results[0].geometry.location.lat);
 console.log(lat);
-var lng = (res.results[2].geometry.location.lng);
+var lng = (res.results[0].geometry.location.lng);
 console.log(lng);
+initialize(lat,lng);
 }
 })
 
-
-function initialize() {
+function initialize(lat,lng) {
     var mapCanvas = document.getElementById('map');
-    var mapOptions = { center: new google.maps.LatLng(44.5403, -78.5463), zoom: 17, mapTypeId: google.maps.MapTypeId.ROADMAP}
+    var mapOptions = {
+        center: new google.maps.LatLng(lat, lng),
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
     var map = new google.maps.Map(mapCanvas, mapOptions)
-    
+
+var LatLng = {'lat': lat, 'lng':lng};
+console.log(LatLng);
+var marker = new google.maps.Marker({
+position:LatLng,
+map:map,
+title:'ohyeah'
+});
+
 }
 
 
-google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
 </script>";?>
 
 </div>
