@@ -66,7 +66,7 @@ var articleArray = [];
 articleArray = $('article').toArray();
 console.log(articleArray);
 for(var l = 0; l < articleArray.length; l++){
-if ()
+
 }
 $.ajax({
 url:'https://maps.googleapis.com/maps/api/geocode/json',
