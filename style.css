@@ -1061,7 +1061,6 @@ li .menu-item  {
 .site-main {
 	width: 90%;
 	float: right;
-	height: 100vh;
 }
 /*POST STYLES*/
 .site-title {
@@ -1073,6 +1072,9 @@ li .menu-item  {
 }
 .site-description p {
 	font-family: 'work-sans', sans-serif;
+}
+.entry-content p {
+	line-height: 2rem;
 }
 /*LOCATION STYLES*/
 .content-area img {
@@ -1110,6 +1112,7 @@ footer {
 .site-content {
 	background: #272C28;
 	padding: 2% 0 0 0;
+	padding-bottom: 10%;
 }
 .site-content a {
 	text-decoration: none;
@@ -1119,6 +1122,7 @@ footer {
 	background: #272C28;
 	color: #C8D2C3;
 	padding: 2%;
+	height: 10%;
 	width: 90%;
     float: right;
 }	
@@ -1132,9 +1136,14 @@ footer {
 .entry-title {
 	color: #BE824C;
 	font-family: 'work-sans', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 /*INSTAGRAM STYLES*/
+#sb_instagram {
+	background: #272C28;
+}
 .sbi_header_text p {
 	color: #fff;
 }
@@ -1145,6 +1154,7 @@ footer {
 	color: #fff;
 	background: #BE824C;
 }
+
 /** CAN NOT CHANGE INSTAGRAM BUTTON STYLES*/
 .site-footer {
 	background: #272C28;

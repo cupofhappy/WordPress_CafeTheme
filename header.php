@@ -24,8 +24,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cafetheme' ); ?></a>
-
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<header id="masthead" class="site-header" role="banner">
+
 
 		<div class="site-branding">
 				<!-- to get the url for the background image -->
