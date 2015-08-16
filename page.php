@@ -56,11 +56,8 @@ $('article').addClass('triplecolumns cf');
 height:400px;
 width:60%;
 margin: 0 auto;
-<<<<<<< HEAD
-padding-top:50px;
-=======
 padding: 2%;
->>>>>>> 35dc74d65f79a3d92863dae4fd78ef2d8ae50b4d
+
 }
 
 </style>
