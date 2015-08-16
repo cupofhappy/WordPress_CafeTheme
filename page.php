@@ -75,8 +75,8 @@ console.log(articleArray[1].children[1].children);
 
 var fullAddressArray = [];
 
-for(var m = 0; m < articleArray[1].children[1].children.length; m++){
-var addedAddress = articleArray[1].children[1].children[m].textContent;
+for(var m = 0; m < articleArray[addressArray].children[1].children.length; m++){
+var addedAddress = articleArray[addressArray].children[1].children[m].textContent;
 fullAddressArray.push(addedAddress);
 
 }
@@ -91,6 +91,7 @@ dataTyle:'json',
 data:{
 address: fullAddress,
 key:'AIzaSyBaxYYE0CKb-rODDzGDde8a4CBZyfyrwPY'
+
 },
 success: function(res){
 console.log(res);
@@ -110,6 +111,7 @@ function initialize(lat,lng) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
+
 var LatLng = {'lat': lat, 'lng':lng};
 console.log(LatLng);
 var marker = new google.maps.Marker({
@@ -119,7 +121,8 @@ title:'ohyeah'
 });
 
 }
-setInterval(initialize(),100);
+
+
 
 
 
