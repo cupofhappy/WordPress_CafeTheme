@@ -22,7 +22,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
     
  
-
+    <div class='articlediv cf'>
     <?php
         $pagename = basename(get_permalink());
         $pagetitle = 'category_name=' . $pagename;
@@ -38,28 +38,30 @@ get_header(); ?>
 
 
 	<?php endwhile; // End of the loop. ?>
+</div>
 
 
             <?php if ($pagename == 'contact'):
           the_post_thumbnail( full);?>
 
 <?php echo "<script language=javascript>
-$('article').addClass('triplecolumns');
+$('article').addClass('triplecolumns cf');
 
 </script>";
 ?>
 
-<div>
+<div class='mapdiv cf'>
 <style>
 #map {
 height:400px;
 width:60%;
 margin: 0 auto;
 padding: 2%;
+
 }
 
 </style>
-<div id='map'></div>    
+<div id='map' class=''></div>    
 
             <?php echo "<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js'></script>"?>
             <?php echo "<script language=javascript>
@@ -73,7 +75,7 @@ console.log(l);
 addressArray = l;
 }
 }
-console.log(articleArray[1].children[1].children);
+console.log(articleArray[addressArray].children[1].children);
 
 var fullAddressArray = [];
 

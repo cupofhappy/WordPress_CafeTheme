@@ -45,8 +45,7 @@
 
 				</div><!-- main-text -->
 			</div><!-- background-image -->
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+
 			<?php endif; ?>
 
 		</div><!-- .site-branding -->

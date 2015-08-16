@@ -933,12 +933,12 @@ input.search-submit {
 /*LEFT NAVIGATION STYLES*/
 .widget-area {
 	color: rgba(39, 44, 40, 1);
-	background: rgba( 0, 0, 0, 0.7);
+        background: rgba( 0, 0, 0, 0.7);
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100vh;
-	width: 10%;
+	width: 5%;
 	z-index: 4;
 }
 .widget-area a {
@@ -957,6 +957,7 @@ input.search-submit {
 	list-style-type: none;
 	font-family: 'work-sans', sans-serif;
 	text-transform: uppercase;
+
 }
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
@@ -964,10 +965,10 @@ input.search-submit {
 ul .menu-item  { 
     list-style-type: none;
     transform: rotate(-90deg);
-    height: 25vh;
-    line-height: 13.5rem;
+
+    line-height: 25vh;
     text-align: center;
-    width:50px;
+
 }
 li .menu-item  {  
   float: left;
@@ -1189,3 +1190,10 @@ a.by:hover{
     *zoom: 1;
 }
 
+.mapdiv{
+    margin-top:20px;
+}
+
+.articlediv {
+
+}
